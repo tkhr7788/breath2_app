@@ -30,7 +30,7 @@ def calc_breath2_score(form):
     for fld, pts in {
         "age65": 2,
         "ntprobnp125": 2,
-        "hb13": 2,
+        "anemia": 1,
         "cad": 1,
         "af": 1,
         "cardiomegaly": 1,
