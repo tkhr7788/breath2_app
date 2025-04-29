@@ -5,13 +5,15 @@ app = Flask(__name__)
 # 点数 → HFpEF 発症確率（%）
 SCORE_TO_PROB = {
     0: 4,
-    1: 7,
-    2: 12,
-    3: 23,
-    4: 38,
-    5: 63,
-    6: 79,
-    7: 93
+    1: 4,
+    2: 19,
+    3: 19,
+    4: 50,
+    5: 50,
+    6: 77,
+    7: 77,
+    8: 93,
+    9: 93
 }
 
 def calc_breath2_score(form):
@@ -52,7 +54,7 @@ def index():
         risk  = classify_risk(score)
 
         if risk == "high":
-            msg = "HFpEFの可能性あり、循環器内科専門医受診をご検討ください"
+            msg = "HFpEFの可能性 高"
 
     return render_template(
         "index.html",
